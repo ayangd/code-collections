@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Michael "ayangd" Dlone, 2020.
+ */
+
 package ayangd.lib.ioutil;
 
 import java.util.AbstractList;
@@ -58,7 +62,7 @@ public class Menu {
 				System.out.print("> ");
 				String l = sc.nextLine();
 				if (l.length() == 0) continue;
-				if (l.matches("\\d")) {
+				if (l.matches("\\d+")) {
 					// Input is numeric
 					int choice = Integer.parseInt(l);
 					if (choice > 0 && choice <= options.size())

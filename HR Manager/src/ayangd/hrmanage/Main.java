@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Michael "ayangd" Dlone, 2020.
+ */
+
 package ayangd.hrmanage;
 
 import java.io.FileInputStream;

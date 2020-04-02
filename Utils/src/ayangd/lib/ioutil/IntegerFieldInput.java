@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Michael "ayangd" Dlone, 2020.
+ */
+
 package ayangd.lib.ioutil;
 
 import java.util.NoSuchElementException;
@@ -35,7 +39,12 @@ public class IntegerFieldInput {
 				if (prompt != null)
 					System.out.printf("%s: ", prompt);
 				
-				input = sc.nextInt();
+				String strInput = sc.nextLine();
+				if (!strInput.matches("\\d+")) {
+					System.out.println("Please input a number.");
+					continue;
+				}
+				input = Integer.parseInt(strInput);
 				
 				// Check for input criteria
 				if (input >= minimumValue && input <= maximumValue)

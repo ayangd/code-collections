@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Michael "ayangd" Dlone, 2020.
+ */
+
 package ayangd.lib.ioutil;
 
 import java.util.NoSuchElementException;
@@ -53,12 +57,15 @@ public class StringFieldInput {
 					System.out.printf("%s: ", prompt);
 				
 				input = sc.nextLine();
+//				System.out.println(input);
 				
 				// Check for criteria
 				if (checkWordCount && input.length() >= minimumLength && input.length() <= maximumLength) {
 					int wordCount = input.split(" ").length;
 					if (wordCount >= minimumWord && wordCount <= maximumWord)
 						return input;
+				} else if (input.length() >= minimumLength && input.length() <= maximumLength) {
+					return input;
 				}
 				
 				if (input.length() < minimumLength || input.length() > maximumLength) {
